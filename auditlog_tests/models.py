@@ -65,6 +65,7 @@ class RelatedModel(models.Model):
     """
 
     related = models.ForeignKey(to='self', on_delete=models.CASCADE)
+    one_to_one = models.OneToOneField(to='self', on_delete=models.CASCADE)
 
     history = AuditlogHistoryField()
 
