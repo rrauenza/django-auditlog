@@ -59,7 +59,12 @@ class ProxyModel(SimpleModel):
         proxy = True
 
 
-class RelatedModel(models.Model):
+class RelatedModelParent(models.Model):
+    """
+    Use multi table inheritance to make a OneToOneRel field
+    """
+
+class RelatedModel(RelatedModelParent):
     """
     A model with a foreign key.
     """
